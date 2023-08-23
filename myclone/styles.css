@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+/* THIS SIMPLY GIVES 0 MARGIN AND 0 PADDING
+THE BROWSER ITSELF HAS SOME DEFAULT VALUES 
+WE WANT TO OVERRIDE THEM */
+nav{
+    background-color:black;
+    color: white;
+    height: 65px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+nav ul{
+    list-style-type: none;
+}
+.gameContainer{
+    background-color: yellow;   
+     display: flex; 
+    justify-content: center;
+    margin-top: 50px; 
+}
+.container{
+display: grid;
+grid-template-rows: repeat(3,10vw);
+grid-template-columns: repeat(3,10vw);
+font-family: 'Roboto', sans-serif;
+}
+.box{
+    border: 2px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw
+}
+.box:hover{
+    background-color: aqua;
+}
+.gameInfo{
+    padding: 0 34px;
+}
+.imgbox img{
+    display: none;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+@media screen and (max-width: 800px) {
+    .gameContainer{
+    flex-wrap: wrap;
+    }
+    .gameInfo{
+        font-size: 1.3rem;
+    }
+    .container{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+}
+
+
